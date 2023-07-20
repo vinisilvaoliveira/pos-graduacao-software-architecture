@@ -1,0 +1,9 @@
+Kubernetes
+
+Modulo 1:
+
+- Docker e Kubernetes
+- EKS = Amazon Elastic Kubernetes Service
+- Implementar o CI/CD no EKS e conceitos de segurança
+- Arquitetura de software com conceitos de clean code
+
