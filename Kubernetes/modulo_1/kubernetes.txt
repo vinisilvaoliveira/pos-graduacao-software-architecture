@@ -1,9 +1,10 @@
 Kubernetes
 
 Modulo 1:
-
 - Docker e Kubernetes
 - EKS = Amazon Elastic Kubernetes Service
 - Implementar o CI/CD no EKS e conceitos de segurança
 - Arquitetura de software com conceitos de clean code
 
+O que é o Kubernetes?
+O Kubernetes (também conhecido como k8s ou "kube") é uma plataforma de orquestração de containers open source que automatiza grande parte dos processos manuais necessários para implantar, gerenciar e escalar aplicações em containers.
