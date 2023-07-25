@@ -8,3 +8,7 @@ Modulo 1:
 
 O que é o Kubernetes?
 O Kubernetes (também conhecido como k8s ou "kube") é uma plataforma de orquestração de containers open source que automatiza grande parte dos processos manuais necessários para implantar, gerenciar e escalar aplicações em containers.
+
+Azure = É uma plataforma de computação em nuvem executada pela Microsoft, que oferece acesso, gerenciamento e desenvolvimento de aplicativos e serviços por meio de data centers
+- Camada de cache
+redis chave valor( banco noSQL) um dos banco de dados mais rapidos, porém trabalha em memoria RAM
