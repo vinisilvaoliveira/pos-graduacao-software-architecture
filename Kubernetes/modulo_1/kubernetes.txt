@@ -30,7 +30,22 @@ redis chave valor( banco noSQL) um dos banco de dados mais rapidos, porém traba
 k6 = fazer teste de carga
 
 kubectl apply -f [caminho]
-kube
+
+PODS, RÓTULOS E ANOTAÇÕES 
+
+PODS:
+ - Os Pods são criados a partir de definições YAML ou JSON, que especificam quais containers devem ser executados dentro do Pod, suas imagens e as portas em que cada container deve ouvir. Quando ele é criado, recebe um endereço IP interno dentro do cluster, permitindo que outros Pods se comuniquem com ele.
+ - O Kubernetes gerencia a distribuição de carga de trabalho entre esses Pods de forma transparente para o usuário, garantindo que a carga seja distribuída de forma equilibrada.
+  - Os Pods são importantes, no Kubernetes, porque permitem que os desenvolvedores criem aplicativos escaláveis e resilientes. Ao dividir os aplicativos em unidades menores, 
+	como os Pods, os desenvolvedores podem se concentrar em escrever código para uma única responsabilidade. Além disso, os Pods permitem que os aplicativos sejam facilmente escalonados, 
+	permitindo que eles lidem com variações de tráfego sem comprometer o desempenho.
+
+ROTULO:
+ - Os rótulos e as anotações são recursos importantes no Kubernetes, para gerenciar e organizar os objetos, incluindo os Pods.
+ - Os rótulos são pares de chave-valor que são atribuídos aos objetos no Kubernetes, como Pods, Serviços, Application Controllers, entre outros. Eles são usados para identificar, categorizar e selecionar objetos para operações de gerenciamento, como escalonamento e exclusão. Por exemplo, você pode adicionar um rótulo "app: myapp" ao seu Pod para indicar que ele faz parte da aplicação "myapp". Você pode usar esses rótulos para selecionar e executar operações em todos os Pods que fazem parte dessa aplicação.
+
+ANOTAÇÕES:
+As anotações, por outro lado, são pares de chave-valor opcionais que podem ser adicionadas a objetos no Kubernetes. Eles são usados para adicionar metadados adicionais aos objetos, como informações de depuração, documentação e políticas de segurança. Por exemplo, você pode adicionar uma anotação "author: Thiago S Adriano" ao seu Pod para indicar que ele foi criado por Thiago S Adriano. Essas anotações não são usadas para seleção de objetos, mas podem ser úteis para fins de documentação e auditoria.
 
 
 
