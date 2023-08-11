@@ -48,4 +48,24 @@ ANOTAÇÕES:
 As anotações, por outro lado, são pares de chave-valor opcionais que podem ser adicionadas a objetos no Kubernetes. Eles são usados para adicionar metadados adicionais aos objetos, como informações de depuração, documentação e políticas de segurança. Por exemplo, você pode adicionar uma anotação "author: Thiago S Adriano" ao seu Pod para indicar que ele foi criado por Thiago S Adriano. Essas anotações não são usadas para seleção de objetos, mas podem ser úteis para fins de documentação e auditoria.
 
 
+- Services e Config-Map
+Os Services são recursos importantes do Kubernetes, que permitem que você exponha serviços dentro do cluster Kubernetes e gerencie o acesso a esses serviços de forma eficiente.
+Um Service é um objeto do Kubernetes que permite que você exponha um conjunto de Pods como um serviço. Ele fornece um único ponto de entrada para acessar esses Pods, permitindo que você gerencie o acesso a esses serviços de forma eficiente. O Service é responsável por distribuir o tráfego entre os Pods do serviço, garantindo que o tráfego seja distribuído de forma justa e que a carga seja balanceada.
 
+ - ClusterIP: Este é o tipo padrão de Service no Kubernetes. Ele expõe o serviço em um endereço IP interno do cluster e é acessível apenas dentro do cluster Kubernetes. É útil para serviços que precisam se comunicar com outros serviços dentro do cluster Kubernetes
+ - NodePorte: este tipo de Service expõe o serviço em um número de porta no nó do cluster Kubernetes. Isso permite que o serviço seja acessível fora do cluster usando o endereço IP do nó e a porta atribuída. É útil para serviços que precisam ser acessados fora do cluster, como aplicativos da web.
+ - LoadBalace: este tipo de Service expõe o serviço em um balanceador de carga externo. Isso permite que o serviço seja acessível fora do cluster usando um endereço IP externo e uma porta atribuída. É útil para serviços que precisam ser acessados de fora do cluster Kubernetes e exigem balanceamento de carga.
+ 
+Exemplo em aula: Criamos um arquivo com extensão YAML
+apiVersion: a versão da API do Kubernetes que está sendo usada. Neste caso, v1.
+kind: o tipo de objeto Kubernetes que estamos criando. Neste caso, um Pod.
+metadata: as informações de metadados sobre o Pod, incluindo o nome do Pod.
+spec: as especificações do Pod, incluindo informações sobre os containers que serão executados dentro do Pod.
+containers: uma lista de containers que serão executados dentro do Pod. Neste exemplo, há apenas um container.
+name: o nome do container. Neste exemplo, o nome é "meu-container".
+image: a imagem do container que será usada. Neste caso, a imagem do Nginx.
+ports: as portas que serão expostas pelo container. Neste exemplo, a porta 80 é exposta.
+
+ConfigMaps
+ -O ConfigMap é um recurso do Kubernetes que permite separar as configurações de um container de seus artefatos de implantação. Isso significa que é possível armazenar as configurações em um local centralizado e gerenciá-las separadamente do container.
+ kubectl create configmap my-service-config --from-file=config.yaml
