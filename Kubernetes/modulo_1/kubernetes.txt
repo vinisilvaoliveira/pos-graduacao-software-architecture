@@ -69,3 +69,14 @@ ports: as portas que serão expostas pelo container. Neste exemplo, a porta 80 �
 ConfigMaps
  -O ConfigMap é um recurso do Kubernetes que permite separar as configurações de um container de seus artefatos de implantação. Isso significa que é possível armazenar as configurações em um local centralizado e gerenciá-las separadamente do container.
  kubectl create configmap my-service-config --from-file=config.yaml
+ 
+ REPLICASETS
+  - ReplicaSets é um objeto do Kubernetes que garante que um número específico de réplicas de um conjunto de Pods esteja em execução a qualquer momento.  Ele monitora o status das réplicas de um Pod e, se alguma réplica falhar, inicia uma nova para substituí-la.
+  - Conforme vimos no exemplo anterior, os ReplicaSets são responsáveis por manter a integridade do estado do aplicativo, garantindo que haja um número mínimo de réplicas em execução em todos os momentos. Eles são uma extensão do conceito de Deployment que também aprenderemos nesta aula, e que permitem gerenciar o número de réplicas de um conjunto de Pods e atualizar o aplicativo para uma nova versão.
+  - Os ReplicaSets também são responsáveis pela seleção dos Pods que fazem parte do conjunto. Eles usam um seletor de rótulo (que aprendemos na aula anterior), para definir quais Pods pertencem ao conjunto. 
+  
+  Deployments
+  - Um Deployment é um objeto Kubernetes que gerencia a implantação de um conjunto de réplicas de um aplicativo. Ele fornece recursos para gerenciar a atualização de aplicativos, rollbacks e dimensionamento horizontal.
+  - O Deployment é responsável por garantir que um conjunto específico de réplicas esteja em execução em um determinado momento.
+  - Outra funcionalidade importante do Deployment é o dimensionamento horizontal. Isso permite que os usuários aumentem ou diminuam o número de réplicas do aplicativo com base na demanda do serviço. Isso é particularmente útil para aplicativos que experimentam flutuações na carga de trabalho.
+  
