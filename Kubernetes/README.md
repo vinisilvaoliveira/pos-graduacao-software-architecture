@@ -1,6 +1,5 @@
 ## Kubernetes
 
-## Modulo 1:
 - Docker e Kubernetes
 - EKS = Amazon Elastic Kubernetes Service
 - Implementar o CI/CD no EKS e conceitos de segurança
@@ -67,7 +66,7 @@ image: a imagem do container que será usada. Neste caso, a imagem do Nginx.
 ports: as portas que serão expostas pelo container. Neste exemplo, a porta 80 é exposta.
 
 ## ConfigMaps
- -O ConfigMap é um recurso do Kubernetes que permite separar as configurações de um container de seus artefatos de implantação. Isso significa que é possível armazenar as configurações em um local centralizado e gerenciá-las separadamente do container.
+ - O ConfigMap é um recurso do Kubernetes que permite separar as configurações de um container de seus artefatos de implantação. Isso significa que é possível armazenar as configurações em um local centralizado e gerenciá-las separadamente do container.
  kubectl create configmap my-service-config --from-file=config.yaml
  
 ## REPLICASETS
